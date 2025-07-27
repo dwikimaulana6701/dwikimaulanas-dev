@@ -14,7 +14,7 @@ function App() {
           <h1 className="text-5xl/tight font-bold mb-6">Hi, Saya Dwiki Maulana Suharto</h1>
           <p className="text-base/loose mb-6 opacity-50">Saya mempunyai ketertarikan yang tinggi terhadap programmer, terutama pada pembuatan website. dan saya selalu mengevaluasi dan menyesuaikan dengan kebutuhan dan pengalaman pengguna</p>
           <div className="flex items-center gap-2 sm:gap-4">
-            <a href="/public/assets/cv/cv-dwikimaulanas.pdf" download className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600">Download CV <i className="ri-download-line ri-lg"></i></a>
+            <a href="/assets/cv/cv-dwikimaulanas.pdf" download className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-600">Download CV <i className="ri-download-line ri-lg"></i></a>
             <a href="#proyek" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600">Lihat Proyek <i className="ri-arrow-down-line ri-lg"></i></a>
           </div>
         </div>
