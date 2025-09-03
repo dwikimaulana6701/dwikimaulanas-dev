@@ -1,6 +1,6 @@
 import React from "react";
 import  DataImage from "./data"
-import {listTools, listProyek} from "./data"
+import {listTools, listProyek, listSertifikasi} from "./data"
 
 function App() {
   return (
@@ -119,6 +119,37 @@ function App() {
         </div>
       </div>
       {/* Proyek */} 
+
+      {/* Sertifikasi */}
+      <div className="sertifikasi mt-32 py-10" id="sertifikasi">
+        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000">Sertifikasi</h1>
+        <p className="text-center text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikut ini adalah beberapa sertifikasi yang telah saya dapatkan.</p>
+        
+        <div className="sertifikasi-box mt-14 grid lg:grid-cols-3 md:grid-cols-2 gap-4">
+          {listSertifikasi.map((sertif) =>(
+            <div key={sertif.id} className="p-4 bg-zinc-800 rounded-md flex flex-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={sertif.dad}>
+              <img src={sertif.gambar} alt={`Sertifikat ${sertif.nama}`} loading="lazy" className="rounded-md mb-4"/>
+              
+              <div className="flex-grow">
+                <h1 className="text-2xl font-bold mb-2">{sertif.nama}</h1>
+                <p className="text-base/loose mb-4 opacity-70">Dikeluarkan oleh: <strong>{sertif.pemberi}</strong></p>
+              </div>
+
+              <div className="mt-auto">
+                <a
+                  href={sertif.linkSertifikat}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer w-full text-center bg-violet-700 p-3 rounded-lg block border border-zinc-600 hover:bg-violet-600"
+                >
+                  Lihat Sertifikat <i className="ri-external-link-line ri-lg ml-1"></i>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* Sertifikasi */}
       
       {/* Kontak */}
       <div className="kontak mt-32 sm:p-10 p-0" id="kontak">

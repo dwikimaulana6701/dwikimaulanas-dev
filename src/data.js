@@ -202,3 +202,53 @@ export const listProyek = [
     linkGithub: null
   },
 ];
+
+import Sertif1 from "/assets/sertifikasi/image-preview/fsd-harisenin.png";
+import Sertif2 from "/assets/sertifikasi/image-preview/fsd-itbox.png";
+import Sertif3 from "/assets/sertifikasi/image-preview/sertifikasi-kampus.png";
+import Sertif4 from "/assets/sertifikasi/image-preview/laravel-sanbercode.png";
+import Sertif5 from "/assets/sertifikasi/image-preview/python-udemy.png";
+
+export const listSertifikasi = [
+  {
+    id: 1,
+    gambar: Sertif1,
+    nama: "Fullstack Developer Bootcamp in Harisenin.com",
+    pemberi: "Harisenin.com",
+    dad: "200",
+    linkSertifikat: "/assets/sertifikasi/pdf-preview/fullstack-webdev-harisenin.pdf",
+  },
+  {
+    id: 2,
+    gambar: Sertif2,
+    nama: "Fullstack Javascript Developer Course in ITBOX",
+    pemberi: "ITBOX",
+    dad: "200",
+    linkSertifikat: "/assets/sertifikasi/pdf-preview/fullstack-itbox-1.pdf",
+  },
+  {
+    id: 3,
+    gambar: Sertif3,
+    nama: "Web Development Certification in University of Muhammadiyah Malang",
+    pemberi: "LSP UMM",
+    dad: "200",
+    linkSertifikat: "/assets/sertifikasi/pdf-preview/sertifikasi-kampus.pdf",
+  },
+  {
+    id: 4,
+    gambar: Sertif4,
+    nama: "Laravel Bootcamp in Sanbercode",
+    pemberi: "SANBERCODE",
+    dad: "200",
+    linkSertifikat: "/assets/sertifikasi/pdf-preview/laravel-sanbercode.pdf",
+  },
+  {
+    id: 5,
+    gambar: Sertif5,
+    nama: "Python for Beginners in Udemy",
+    pemberi: "UDEMY",
+    dad: "200",
+    linkSertifikat: "/assets/sertifikasi/pdf-preview/udemy-python.pdf",
+  },
+];
+
