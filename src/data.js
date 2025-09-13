@@ -122,13 +122,45 @@ export const listTools = [
   },
 ];
 
+export const listPengalaman = [
+  {
+    id: 1,
+    perusahaan: "CV. Indofarsa Intiraya",
+    posisi: "Staff Admin",
+    tanggal: "Juni 2024 - Maret 2025",
+    deskripsi: [
+      "Mengatur dan menjadwalkan pengiriman pupuk sesuai pesanan.",
+      "Menyiapkan serta memeriksa kelengkapan dokumen pengiriman",
+      "Mengawasi proses muat dan bongkar pupuk agar sesuai jumlah dan standar keselamatan.",
+      "Memantau perjalanan armada dan memastikan pengiriman tepat waktu serta sesuai tujuan.",
+      "Menangani kendala pengiriman atau keluhan dari pelanggan/distributor terkait distribusi pupuk.",
+    ],
+    lokasi: "Sidoarjo, Indonesia",
+    dad: "300",
+  },
+  {
+    id: 2,
+    perusahaan: "Diskominfo Kota Batu",
+    posisi: "Web Developer (Internship)",
+    tanggal: "Agustus 2023 - Oktober 2023",
+    deskripsi: [
+      "Mengembangkan Sistem Informasi Pariwisata (SIMPARTA) Kota Batu menggunakan Laravel untuk memantau data pariwisata, sehingga meningkatkan aksesibilitas data dan pelaporan bagi pemangku kepentingan.",
+      "Membangun fitur input/output data, laporan statistik, dan grafik interaktif, yang memungkinkan visualisasi secara real-time dan meningkatkan akurasi pengambilan keputusan untuk perencanaan pariwisata.",
+      "Merancang dan mengimplementasikan skema database menggunakan MySQL, mendukung penyimpanan data yang efisien dan skalabilitas untuk pemeliharaan sistem jangka panjang.",
+      "Berkoordinasi dengan berbagai departemen untuk kelancaran operasional harian."
+    ],
+    lokasi: "Kota Batu, Indonesia",
+    dad: "200",
+  },
+];
+
 import Proyek1 from "/assets/proyek/proyek1.png";
-import Proyek2 from "/assets/proyek/proyek2.webp";
-import Proyek3 from "/assets/proyek/proyek3.webp";
+import Proyek2 from "/assets/proyek/proyek2.png";
+import Proyek3 from "/assets/proyek/proyek3.png";
 import Proyek4 from "/assets/proyek/proyek4.webp";
-import Proyek5 from "/assets/proyek/proyek5.webp";
-import Proyek6 from "/assets/proyek/proyek6.webp";
-import Proyek7 from "/assets/proyek/proyek7.webp";
+// import Proyek5 from "/assets/proyek/proyek5.webp";
+// import Proyek6 from "/assets/proyek/proyek6.webp";
+// import Proyek7 from "/assets/proyek/proyek7.webp";
 
 export const listProyek = [
   {
@@ -144,62 +176,22 @@ export const listProyek = [
   {
     id: 2,
     gambar: Proyek2,
-    nama: "Company Profile",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
+    nama: "Backend API Course App (Video Belajar)",
+    desk: "RESTful API yang menangani semua logika sisi server, termasuk manajemen pengguna, otentikasi dengan verifikasi email, pengelolaan data kursus dengan fungsionalitas pencarian & filter, serta endpoint untuk upload file.",
+    tools: ["Node.js", "Express.js", "MySQL", "JWT", "Bcrypt", "Nodemailer", "Multer"],
     dad: "300",
     linkWebsite: null,
-    linkGithub: null
+    linkGithub: "https://github.com/dwikimaulana6701/Intermediate-BE2/tree/advance-be"
   },
   {
     id: 3,
     gambar: Proyek3,
-    nama: "Web Pernikahan 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
+    nama: "SIMPARTA",
+    desk: "Sistem Informasi Pariwisata (SIMPARTA) Kota Batu adalah sebuah aplikasi web yang dirancang untuk menyediakan informasi lengkap tentang destinasi wisata, akomodasi, dan layanan terkait lainnya di suatu wilayah tertentu. Aplikasi ini bertujuan untuk memudahkan wisatawan dalam merencanakan perjalanan mereka dengan menyediakan data yang akurat dan terkini.",
+    tools: ["Laravel 8", "Javascript", "Bootstrap 5", "CSS", "MySql", "Katalon"],
     dad: "400",
     linkWebsite: null,
-    linkGithub: null
-  },
-  {
-    id: 4,
-    gambar: Proyek4,
-    nama: "Website Course",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
-    dad: "500",
-    linkWebsite: null,
-    linkGithub: null
-  },
-  {
-    id: 5,
-    gambar: Proyek5,
-    nama: "Web Portfolio",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
-    dad: "600",
-    linkWebsite: null,
-    linkGithub: null
-  },
-  {
-    id: 6,
-    gambar: Proyek6,
-    nama: "Company Profile 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["NextJS", "TailwindCSS", "Framermotion"],
-    dad: "700",
-    linkWebsite: null,
-    linkGithub: null
-  },
-  {
-    id: 7,
-    gambar: Proyek7,
-    nama: "Company Profile 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["NextJS", "TailwindCSS", "Framermotion"],
-    dad: "800",
-    linkWebsite: null,
-    linkGithub: null
+    linkGithub: "https://github.com/dwikimaulana6701/simparta-reborn"
   },
 ];
 
@@ -208,6 +200,8 @@ import Sertif2 from "/assets/sertifikasi/image-preview/fsd-itbox.png";
 import Sertif3 from "/assets/sertifikasi/image-preview/sertifikasi-kampus.png";
 import Sertif4 from "/assets/sertifikasi/image-preview/laravel-sanbercode.png";
 import Sertif5 from "/assets/sertifikasi/image-preview/python-udemy.png";
+import Sertif6 from "/assets/sertifikasi/image-preview/coe-seal.png";
+import Sertif7 from "/assets/sertifikasi/image-preview/cisco.png";
 
 export const listSertifikasi = [
   {
@@ -249,6 +243,22 @@ export const listSertifikasi = [
     pemberi: "UDEMY",
     dad: "200",
     linkSertifikat: "/assets/sertifikasi/pdf-preview/udemy-python.pdf",
+  },
+  {
+    id: 6,
+    gambar: Sertif6,
+    nama: "Center of Excellence (CoE) in University of Muhammadiyah Malang",
+    pemberi: "SEAL",
+    dad: "200",
+    linkSertifikat: "/assets/sertifikasi/pdf-preview/sertifikat-coe-seal.pdf",
+  },
+  {
+    id: 7,
+    gambar: Sertif7,
+    nama: "CCNAv7: Switching, Routing, and Wireless Essentials",
+    pemberi: "Cisco Networking Academy",
+    dad: "200",
+    linkSertifikat: "/assets/sertifikasi/pdf-preview/cisco-networking.pdf",
   },
 ];
 

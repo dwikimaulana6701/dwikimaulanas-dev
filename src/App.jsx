@@ -1,6 +1,6 @@
 import React from "react";
 import  DataImage from "./data"
-import {listTools, listProyek, listSertifikasi} from "./data"
+import {listTools, listPengalaman, listProyek, listSertifikasi} from "./data"
 
 function App() {
   return (
@@ -42,23 +42,74 @@ function App() {
             </div>
           </div>
         </div>
-          <div className="tools mt-32">
-            <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000">Tools yang dipakai</h1>
-            <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" >Berikut ini beberapa tools yang sering saya pakai untuk pembuatan website ataupundesign</p>
-            <div className="tools-box mt-14 grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4">
-              {listTools.map((tool) => (
-                <div key={tool.id} className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad}>
-                  <img src={tool.gambar} alt="Tools Image" className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900"loading="lazy"/>
-                  <div>
-                    <h4 className="font-bold">{tool.nama}</h4>
-                    <p className="opacity-50">{tool.ket}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Tentang Saya */}
+        
+        {/* Pengalaman Kerja */}
+        <div className="pengalaman mt-20">
+          <h1 className="text-3xl font-bold mb-20 text-center" data-aos="fade-up" data-aos-duration="1000">Pengalaman Kerja</h1>
+          <div className="relative">
+            <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-zinc-600 rounded-full"></div>
+              <div className="space-y-12">
+                {listPengalaman.map((item, index) => {
+                  const isLeft = index % 2 === 0;
+                  return (
+                    <div key={item.id} className="relative">
+                      <div className="absolute left-1/2 top-1 w-4 h-4 bg-violet-500 rounded-full -translate-x-1/2 border-4 border-zinc-800 z-10"></div>
+                        <div className="grid grid-cols-2 gap-x-12">
+                          {isLeft ? (
+                            <div className="col-start-1 text-right pr-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay={item.dad}>
+                              <h3 className="text-xl font-bold text-violet-400">{item.posisi}</h3>
+                              <p className="font-semibold text-lg mb-1">{item.perusahaan}</p>
+                              <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.tanggal}</time>
+                              <ul className="list-disc list-inside mt-2 space-y-1 text-base/loose opacity-80">
+                                {item.deskripsi.map((point, idx) => <li key={idx}>{point}</li>)}
+                              </ul>
+                              <p className="mt-3 inline-flex items-center justify-end gap-2 opacity-60">
+                                <i className="ri-map-pin-line"></i> {item.lokasi}
+                              </p>
+                            </div>
+                          ) : <div></div>}
+                          
+                          {!isLeft ? (
+                            <div className="col-start-2 text-left pl-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay={item.dad}>
+                              <h3 className="text-xl font-bold text-violet-400">{item.posisi}</h3>
+                              <p className="font-semibold text-lg mb-1">{item.perusahaan}</p>
+                              <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.tanggal}</time>
+                              <ul className="list-disc pl-5 mt-2 space-y-1 text-base/loose opacity-80">
+                                {item.deskripsi.map((point, idx) => <li key={idx}>{point}</li>)}
+                              </ul>
+                              <p className="mt-3 flex items-center gap-2 opacity-60">
+                                <i className="ri-map-pin-line"></i> {item.lokasi}
+                              </p>
+                            </div>
+                          ) : <div></div>}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
           </div>
+        </div>
+        {/* Pengalaman Kerja */}
+
+        {/* Tools */}
+        <div className="tools mt-32">
+          <h1 className="text-4xl/snug font-bold mb-4" data-aos="fade-up" data-aos-duration="1000">Tools yang dipakai</h1>
+          <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" >Berikut ini beberapa tools yang sering saya pakai untuk pembuatan website ataupun design</p>
+          <div className="tools-box mt-14 grid lg:grid-cols-4 grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4">
+            {listTools.map((tool) => (
+              <div key={tool.id} className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad}>
+                <img src={tool.gambar} alt="Tools Image" className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900"loading="lazy"/>
+                <div>
+                  <h4 className="font-bold">{tool.nama}</h4>
+                  <p className="opacity-50">{tool.ket}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      {/* tentang saya */}
+      {/* Tools */}
 
       {/* Proyek */}
       <div className="proyek mt-32 py-10" id="proyek">
@@ -91,7 +142,7 @@ function App() {
                       disabled
                       className="md:w-1/2 w-full text-center bg-zinc-600 p-2 rounded-lg block border border-zinc-600 opacity-50 cursor-not-allowed"
                     >
-                      Website On Going
+                      Lihat Website
                     </button>
                   )}
 
