@@ -45,52 +45,74 @@ function App() {
         {/* Tentang Saya */}
         
         {/* Pengalaman Kerja */}
-        <div className="pengalaman mt-20">
-          <h1 className="text-3xl font-bold mb-20 text-center" data-aos="fade-up" data-aos-duration="1000">Pengalaman Kerja</h1>
-          <div className="relative">
-            <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-zinc-600 rounded-full"></div>
-              <div className="space-y-12">
-                {listPengalaman.map((item, index) => {
-                  const isLeft = index % 2 === 0;
-                  return (
-                    <div key={item.id} className="relative">
-                      <div className="absolute left-1/2 top-1 w-4 h-4 bg-violet-500 rounded-full -translate-x-1/2 border-4 border-zinc-800 z-10"></div>
-                        <div className="grid grid-cols-2 gap-x-12">
-                          {isLeft ? (
-                            <div className="col-start-1 text-right pr-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay={item.dad}>
-                              <h3 className="text-xl font-bold text-violet-400">{item.posisi}</h3>
-                              <p className="font-semibold text-lg mb-1">{item.perusahaan}</p>
-                              <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.tanggal}</time>
-                              <ul className="list-disc list-inside mt-2 space-y-1 text-base/loose opacity-80">
-                                {item.deskripsi.map((point, idx) => <li key={idx}>{point}</li>)}
-                              </ul>
-                              <p className="mt-3 inline-flex items-center justify-end gap-2 opacity-60">
-                                <i className="ri-map-pin-line"></i> {item.lokasi}
-                              </p>
-                            </div>
-                          ) : <div></div>}
-                          
-                          {!isLeft ? (
-                            <div className="col-start-2 text-left pl-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay={item.dad}>
-                              <h3 className="text-xl font-bold text-violet-400">{item.posisi}</h3>
-                              <p className="font-semibold text-lg mb-1">{item.perusahaan}</p>
-                              <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.tanggal}</time>
-                              <ul className="list-disc pl-5 mt-2 space-y-1 text-base/loose opacity-80">
-                                {item.deskripsi.map((point, idx) => <li key={idx}>{point}</li>)}
-                              </ul>
-                              <p className="mt-3 flex items-center gap-2 opacity-60">
-                                <i className="ri-map-pin-line"></i> {item.lokasi}
-                              </p>
-                            </div>
-                          ) : <div></div>}
-                      </div>
-                    </div>
-                  );
-                })}
+<div className="pengalaman mt-20">
+  <h1 className="text-3xl font-bold mb-20 text-center" data-aos="fade-up" data-aos-duration="1000">
+    Pengalaman Kerja
+  </h1>
+  <div className="relative">
+    {/* Garis Tengah */}
+    <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-zinc-600 rounded-full"></div>
+    
+    <div className="space-y-12">
+      {listPengalaman.map((item, index) => {
+        const isLeft = index % 2 === 0;
+        return (
+          <div key={item.id} className="relative">
+            {/* Titik Tengah */}
+            <div className="absolute left-1/2 top-1 w-4 h-4 bg-violet-500 rounded-full -translate-x-1/2 border-4 border-zinc-800 z-10"></div>
+            
+            <div className="grid grid-cols-2">
+              {/* Kolom Kiri */}
+              <div 
+                className={`pr-10 pl-6 md:pl-20 pb-12 flex justify-end ${!isLeft ? "invisible h-0" : ""}`} 
+                data-aos="fade-right" 
+                data-aos-duration="800"
+                data-aos-delay={item.dad}
+              >
+                <div className="max-w-full text-left">
+                  <h3 className="text-xl font-bold text-violet-400">{item.posisi}</h3>
+                  <p className="font-semibold text-lg mb-1">{item.perusahaan}</p>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.tanggal}</time>
+                  <ul className="list-disc pl-5 mt-2 space-y-1 text-base/loose opacity-80">
+                    {item.deskripsi.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 flex items-center gap-2 opacity-60">
+                    <i className="ri-map-pin-line"></i> {item.lokasi}
+                  </p>
+                </div>
               </div>
+
+              {/* Kolom Kanan */}
+              <div 
+                className={`pl-10 pr-6 md:pr-20 pb-12 flex justify-start ${isLeft ? "invisible h-0" : ""}`} 
+                data-aos="fade-left" 
+                data-aos-duration="800"
+                data-aos-delay={item.dad}
+              >
+                <div className="max-w-full text-left">
+                  <h3 className="text-xl font-bold text-violet-400">{item.posisi}</h3>
+                  <p className="font-semibold text-lg mb-1">{item.perusahaan}</p>
+                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{item.tanggal}</time>
+                  <ul className="list-disc pl-5 mt-2 space-y-1 text-base/loose opacity-80">
+                    {item.deskripsi.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 flex items-center gap-2 opacity-60">
+                    <i className="ri-map-pin-line"></i> {item.lokasi}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        {/* Pengalaman Kerja */}
+        );
+      })}
+    </div>
+  </div>
+</div>
+{/* Pengalaman Kerja */}
 
         {/* Tools */}
         <div className="tools mt-32">

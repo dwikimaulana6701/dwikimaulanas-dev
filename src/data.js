@@ -125,8 +125,23 @@ export const listTools = [
 export const listPengalaman = [
   {
     id: 1,
-    perusahaan: "CV. Indofarsa Intiraya",
-    posisi: "Staff Admin",
+    perusahaan: "PT. Indonesia Tri Sembilan",
+    posisi: "Logistic Green Storage Stacker",
+    tanggal: "September 2025 - Present",
+    deskripsi: [
+      "Bertanggung jawab untuk mengelola dan mengatur penyimpanan tembakau di gudang",
+      "Memastikan stock tembakau di gudang sesuai dengan data yang tercatat dalam sistem",
+      "Menyiapkan tembakau untuk support produksi sesuai dengan jadwal dan blend yang dibutuhkan",
+      "Mengawasi proses reject agar sesuai dengan data dan standar yang ditetapkan",
+      "Membuat surat jalan untuk pengiriman barang reject ke customer.",
+    ],
+    lokasi: "Mojokerto, Indonesia",
+    dad: "400",
+  },
+  {
+    id: 2,
+    perusahaan: "PT. Rinjani Amas Nusantara",
+    posisi: "Staff Administrasi",
     tanggal: "Juni 2024 - Maret 2025",
     deskripsi: [
       "Mengatur dan menjadwalkan pengiriman pupuk sesuai pesanan.",
@@ -139,7 +154,7 @@ export const listPengalaman = [
     dad: "300",
   },
   {
-    id: 2,
+    id: 3,
     perusahaan: "Diskominfo Kota Batu",
     posisi: "Web Developer (Internship)",
     tanggal: "Agustus 2023 - Oktober 2023",
